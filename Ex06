@@ -1,0 +1,17 @@
+int main (){
+    int n;
+    printf ("digite um valor: ");
+    sca#include <stdio.h>
+
+int fatorial (int);
+nf ("%d", &n);
+
+    printf ("fatorial: %d", fatorial(n));
+}
+
+int fatorial (int n){
+    int fat=1;
+    for (int i=n; i>0; i--){
+        fat = fat*i;
+    }
+    return fat;
