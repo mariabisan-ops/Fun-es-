@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int soma (int, int);
+
+int main(){
+    int n1, n2;
+    printf ("digite o primeiro valor: ");
+    scanf ("%d", &n1);
+    printf ("digite o segundo valor: ");
+    scanf ("%d", &n2);
+
+    printf ("multiplicação: %d ", soma (n1,n2));
+}
+
+int soma (int n1, int n2){
+    int cont =0;
+    for (int i = 0; i<n2; i++){
+        cont = n1 + cont;
+    }
+    return cont;
+}
