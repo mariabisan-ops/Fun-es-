@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <string.h>
+
+int palindromo (char []);
+
+int main(){
+    char p[30];
+    printf ("digite a palavra: ");
+    fgets (p, sizeof (p), stdin);
+    p[strlen(p)-1]='\0';
+
+    if (palindromo (p)){
+        printf ("é palindromo");
+    }
+    else {
+        printf ("não é palindromo");
+    }
+}
+
+int palindromo (char p[]){
+    for (int i=0; i<strlen(p)/2; i++){
+        if (p[i]!=p[strlen(p) -1 -i]){
+            return 0;
+        }
+    }
+    return 1;
+}
