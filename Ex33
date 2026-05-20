@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int divisores (int[], int);
+
+int main (){
+  int n;
+  int v[100];
+  printf ("digite um numero: ");
+  scanf ("%d", &n);
+
+  printf ("seus divisores sao: ");
+  for (int i=0; i<divisores(v, n); i++){
+    printf ("%d", v[i]);
+  }
+}
+
+int divisores (int v[], int n){
+  int cont=0;
+  for (int i=1; i<=n; i++){
+    if(n%i==0){
+      v[cont] = i;
+      cont ++;
+    }
+  }
+  return cont;
+}
