@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int divisao (int, int);
+
+int main (){
+  int x, y;
+  printf ("digite um numero: ");
+  scanf ("%d", &x);
+  printf ("digite um numero: ");
+  scanf ("%d", &y);
+  while (x>=y){
+    printf ("valor invalido.\nDigite novamente");
+    scanf ("%d", &y);
+  }
+
+  printf ("valores encontrados: ");
+  divisao (x,y);
+}
+
+void divisao (int x, int y){
+  for (int i=x; i<y; i++){
+    if (i%13==5){
+      printf ("%d", i);
+    }
+  }
+}
