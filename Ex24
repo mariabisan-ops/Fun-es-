@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int combinacao (int, int);
+int fatorial (int);
+
+int main (){
+  int n,r;
+  printf ("digite o primeiro valor: ");
+  scanf ("%d", &n);
+  printf ("digite o segundo valor: ");
+  scanf ("%d", &r);
+
+  printf ("combinaçao: %d", combinacao(n,r));
+}
+
+int fatorial (int x){
+  int fat=1;
+  for (int i=x; i>0; i--){
+    fat = fat*i;
+  }
+  return fat;
+}
+
+int combinacao(int n, int r){
+  return fatorial (n)/ (fatorial (r) * fatorial (n-r));
+}
