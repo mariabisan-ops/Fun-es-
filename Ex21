@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int triangulo (int, int, int);
+
+
+int main(){
+  int a, b, c;
+  printf ("digite o lado a: ");
+  scanf ("%d", &a);
+  printf ("digite o lado b: ");
+  scanf ("%d", &b);
+  printf ("digite o lado c: ");
+  scanf ("%d", &c);
+
+  if (triangulo (a,b,c) == 1){
+    printf ("equilatero");
+  }
+  if (triangulo (a,b,c) == 2){
+    printf ("isosceles");
+  }
+  if (triangulo (a,b,c)== 3){
+    printf ("escaleno");
+  }
+  
+}
+
+int triangulo (int x, int y, int z){
+  if (x+y>z && x+z>y && y+z>x){
+    if (x==y && x==z){
+      return 1;
+    }
+    if (x!=y && y!=z && x!=z){
+      return 3;
+    }
+    else {
+      return 2;
+    }
+  }
+  else {
+    return 0;
+  }
+}
+
