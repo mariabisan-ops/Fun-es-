@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int primo (int);
+int qtdeprimos (int, int);
+
+int main (){
+    int x, y;
+    printf ("digite o primeiro valor: ");
+    scanf ("%d", &x);
+    printf ("digite o segundo valor: ");
+    scanf ("%d", &y);
+    while (x>y){
+        printf ("valor inválido.\n Digite novamente: ");
+        scanf ("%d", &y);
+    }
+
+    printf ("quantidade de primos: %d", qtdeprimos(x,y));
+}
+
+int primo (int n){
+    if (n==1){
+        return 0;
+    }
+    for (int i=2; i<n; i++){
+        if (n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int qtdeprimos (int x, int y){
+    int cont = 0;
+    for (int i=x; i<=y; i++){
+        if (primo(i)){
+            cont++;
+        }
+    }
+    return cont;
+}
