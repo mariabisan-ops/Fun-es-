@@ -1,0 +1,31 @@
+int main(){
+    int v[10];
+    for (int i=0; i<10; i++){
+        printf ("digite um numero: ");
+        scanf ("%d", v[i]);
+    }
+
+    printf ("mmc = %d", mmcVetor(v, n));
+}
+
+int mdc (int a, int b){
+    int resto = 0;
+    while (b!=0){
+        resto = a%b;
+        a=b;
+        b=resto;
+    }
+    return a;
+}
+
+int mmc1 (int a, int b){
+    return (a*b)/mdc(a,b);
+}
+
+int mmcVetor (int v[], int n){
+    int mmc =0;
+    for (int i=0; i<n; i++){
+        mmc = mmc1 (mmc, v[i]);
+    }
+    return mmc;
+}
