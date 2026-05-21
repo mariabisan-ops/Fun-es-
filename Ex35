@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+int tamanho (char);
+int compara (char, char);
+
+int main(){
+    char p[50], p2[50];
+    printf ("digite uma palavra: ");
+    fgets (p, sizeof(p), stdin);
+    p[strlen(p)-1]='\0';
+
+    printf ("digite a segunda palavra: ");
+    fgets (p2, sizeof(p2), stdin);
+    p2[strlen(p2)-1]='\0';
+
+    printf ("tamanho: %d", tamanho(p));
+
+    if (compara(p, p2)){
+        printf ("As palavras são iguais");
+    }
+
+
+}
+
+int tamanho (char s[]){
+    int cont=0;
+    while (s[cont]!='\0'){
+        cont++;
+    }
+    return cont;
+}
