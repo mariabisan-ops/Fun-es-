@@ -1,3 +1,9 @@
+#include <stdio.h>
+int mdc (int, int);
+int mmc1 (int, int);
+int mmcVetor (int [], int)
+
+
 int main(){
     int v[10];
     for (int i=0; i<10; i++){
