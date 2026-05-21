@@ -1,15 +1,31 @@
 #include <stdio.h>
-#include <string.h>
+
+int multiplicacao (int, int);
+int potencia (int, int);
+
 
 int main(){
-    char nome[50];
-    printf ("Nome: ");
-    fgets (nome, sizeof (nome), stdin);
-    nome[strlen(nome)-1] = '\0';//para tirar o enter
+    int x,y;
+    printf ("digite o valor da base: ");
+    scanf ("%d", &x);
+    printf ("digite o valor da potência: ");
+    scanf ("%d", &y);
 
-    if (nome[0]=='a' || nome[0]=='A'){
-        printf ("%s", nome);
+    printf ("potência: %d", potencia(x,y));
+}
+
+int multiplicacao (int n1, int n2){
+    int cont = 0;
+    for (int i = 0; i<n2; i++){
+        cont = cont + n1;
     }
-    else {
-        printf ("não é possivel imprimir esse nome");
+    return cont;
+}
+
+int potencia (int x, int y){
+    int resultado = 1;
+    for (int i =0; i<y; i++){
+        resultado = multiplicacao (resultado, x);
     }
+    return resultado;
+}
