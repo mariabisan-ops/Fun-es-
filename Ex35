@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 
-int tamanho (char);
-int compara (char, char);
+int tamanho (char[]);
+int compara (char[], char[]);
 
 int main(){
     char p[50], p2[50];
@@ -14,7 +14,7 @@ int main(){
     fgets (p2, sizeof(p2), stdin);
     p2[strlen(p2)-1]='\0';
 
-    printf ("tamanho: %d", tamanho(p));
+    printf ("tamanho: %d\n", tamanho(p));
 
     if (compara(p, p2)){
         printf ("As palavras são iguais");
@@ -29,4 +29,17 @@ int tamanho (char s[]){
         cont++;
     }
     return cont;
+}
+
+int compara (char s1[], char s2[]){
+    int cont=0;
+    for (int i=0; i<tamanho(s1); i++){
+        if (s1[i]!=s2[i] && s1[i]!='\0'){
+            return 0;
+        }
+        cont++;
+    }
+    if (cont==tamanho(s1)){
+        return 1;
+    }
 }
