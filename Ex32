@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int celsius (int [], int);
+
+int main(){
+    int f[3];
+    int c[3];
+    for (int i = 50; i<=150; i+50){
+        f[i]= i;
+    }
+    for (int i=50; i<=150; i+50){
+        printf ("farenheit: %d", f[i])
+    }
+    printf ("\n%d ", celsius (c, n));
+}
+
+int celsius (int c[], n){
+    for (int i=50; i<=150; i+50){
+        c[i] = (5*(f[i]-32))/9;
+    }
+}
