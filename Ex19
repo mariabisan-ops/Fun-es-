@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int binario (int v[], int);
+
+int main(){
+    int v[100];
+    int n;
+    printf ("digite o valor a ser convertido: ");
+    scanf ("%d", &n);
+
+    binario (v,n);
+}
+
+int binario (int v[], int n){
+    int cont = 0;
+    for (int i=0; i<cont; i++){
+        v[cont]=n%2;
+        cont++;
+    }
+    for (int i=cont; i>0; i--){
+        printf ("%d", v[i]);
+    }
+}
