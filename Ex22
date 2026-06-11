@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int valor (int);
+void valor (int);
 
 int main (){
   int n;
