@@ -1,13 +1,14 @@
+#include <stdio.h>
+
+int fat (int);
+
 int main (){
-    int n;
-    printf ("digite um valor: ");
-    sca#include <stdio.h>
-
-int fatorial (int);
-nf ("%d", &n);
-
-    printf ("fatorial: %d", fatorial(n));
+  int n;
+  printf (“digite um valor: “);
+  scanf (“%d”, &n);
+  printf (“fatorial: %d”, fat(n));
 }
+
 
 int fatorial (int n){
     int fat=1;
