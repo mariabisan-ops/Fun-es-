@@ -16,3 +16,4 @@ int fatorial (int n){
         fat = fat*i;
     }
     return fat;
+}
