@@ -3,9 +3,10 @@
 
 int tamanho (char[]);
 int compara (char[], char[]);
+void concatena (char[], char[]);
 
 int main(){
-    char p[50], p2[50];
+    char p[100], p2[50];
     printf ("digite uma palavra: ");
     fgets (p, sizeof(p), stdin);
     p[strlen(p)-1]='\0';
@@ -20,6 +21,8 @@ int main(){
         printf ("As palavras são iguais");
     }
 
+    printf ("concatena: ");
+    concatena (p, p2);
 
 }
 
@@ -43,3 +46,14 @@ int compara (char s1[], char s2[]){
         return 1;
     }
 }
+
+void concatena(char s1[], char s2[]){
+  int i= tamanho (s1);
+  for (int j = 0; j<=tamanho(s2); j++) {
+    s1[i] = s2[j];
+    i ++;
+  }
+  s1[i]= '\0';
+  printf ("%c ", s1);
+}
+
