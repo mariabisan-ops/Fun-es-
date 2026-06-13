@@ -1,22 +1,32 @@
 #include <stdio.h>
 
-int fibonacci (int [], int);
+void fibonnacci (int );
 
 int main (){
-    int v[100];
-    int n;
-    printf ("digite o tamanho da sequência fibonacci que deseja: ");
-    scanf ("%d", &n);
+  int n;
+  printf (“digite o número de termos:  “);
+  scanf (“%d”, &n);
+  printf (“sequência : “);
+  fibonnacci (n);
+}
 
-    fibonacci (v,n);
-}
-int fibonacci (int v[], int n){
-    for (int i=0; i<n; i++){
-        v[0]=0;
-        v[1]=1;
-        v[i]=v[i-1]+v[i-2];
+void fibonnacci (int n){
+  int a=0, b=1, c;
+  for (int i=1; i<=n; i++){
+    if (i==1){
+      printf (“%d”, a);
     }
-    for (int i=0; i<n; i++){
-        printf ("%d, ", v[i]);
+    else {
+      if (i==2){
+        printf (“%d”, b);
+      }
+      else {
+        c = a + b;
+        printf (“%d”, c);
+        a=b;
+        b=c;
+      }
     }
+  }
 }
+
